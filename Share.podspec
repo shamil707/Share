@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Share'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Share.'
+  s.summary          = 'Share help us to take ScreenShot and we can share screenshot,image,text'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
+'Share help us to take ScreenShot and we can share screenshot,image,text'
                        DESC
 
   s.homepage         = 'https://github.com/shamil707/Share'
@@ -31,6 +32,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Share/Classes/**/*'
+  s.swift_version = '4.0'
   
   # s.resource_bundles = {
   #   'Share' => ['Share/Assets/*.png']
