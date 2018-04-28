@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Share'
-  s.version          = '0.1.0'
+  s.version          = '0.1.3'
   s.summary          = 'Share help us to take ScreenShot and we can share screenshot,image,text'
 
 # This description is used to generate tags and improve search results.
