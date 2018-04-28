@@ -13,7 +13,7 @@ class ShareScreeen: UIViewController {
     
     //Take Screen Shot and Share Across App Without CallBack
     @objc(shareScreenShot)
-    func shareScreenShot() -> Bool{
+    public func shareScreenShot() -> Bool{
         var isSuccess:Bool = false
         let layer = UIApplication.shared.keyWindow!.layer
         let scale = UIScreen.main.scale
@@ -34,7 +34,7 @@ class ShareScreeen: UIViewController {
     
     //Share Image by Passing Image
     @objc(shareImage:)
-    func shareImage(screenshot:UIImage? = nil) ->  Bool {
+    public func shareImage(screenshot:UIImage? = nil) ->  Bool {
         var isSuccess:Bool = false
         if let screenshot = screenshot {
             let imageToShare = [screenshot]
@@ -51,7 +51,7 @@ class ShareScreeen: UIViewController {
     
     //Share Text by Passing Text
     @objc(shareText:)
-    func shareText(text:String? = nil) ->  Bool {
+    public func shareText(text:String? = nil) ->  Bool {
         var isSuccess:Bool = false
         if let text = text {
             let textToShare = [ text ]
@@ -68,7 +68,7 @@ class ShareScreeen: UIViewController {
     
     
     //Take Screen Shot and Share Across App With CallBack
-    func shareImageWithCallBack(success: @escaping (_ value: Bool) -> Void, onFailure failure: @escaping (_ value: Bool) -> Void) -> () {
+    public func shareImageWithCallBack(success: @escaping (_ value: Bool) -> Void, onFailure failure: @escaping (_ value: Bool) -> Void) -> () {
         //var isSuccess:Bool = false
         let layer = UIApplication.shared.keyWindow!.layer
         let scale = UIScreen.main.scale
@@ -84,7 +84,7 @@ class ShareScreeen: UIViewController {
         else { failure(false) }
     }
     
-    func shareCallBack(image: UIImage, onSuccess success: @escaping (_ value: Bool) -> Void, onFailure failure: @escaping (_ value: Bool) -> Void) {
+    public func shareCallBack(image: UIImage, onSuccess success: @escaping (_ value: Bool) -> Void, onFailure failure: @escaping (_ value: Bool) -> Void) {
         let imageToShare = [image]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
